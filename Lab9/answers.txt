@@ -1,0 +1,26 @@
+Haoran Miao 
+301542189
+hma98@sfu.ca
+
+Question 1:
+
+There is a memory leak in the previous code, the Data_T * array was not freed after use. We should free the memory allocated for the array after use to avoid memory leak. 
+The res also was not freed, it was created by time_result * which used dynamic allocation.
+
+Question 2:
+
+I think 60% of the running time for bubble sort is spent on the loops and comparing the values. Because it take the longest to do, and also is called multiple times.
+25% of the running time is spent on the swap element, because it takes some steps to swap in assembly code. And rest of the time 15% is spent of branch mispredictions.
+
+Question 3:
+
+I called just_sort 2 times with different array size.
+
+Question 4:
+around 55% when it is all random, and around 12.96% when it is all sorted.
+
+Question 5:
+Perf reported a large amount of cache misses, this is expected because the array size was greater than the cache memory space
+
+Question 6: 
+Cachegrind reported a large number of cache misses, this is expected because the array size was greater than the cache memory space

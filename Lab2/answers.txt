@@ -1,0 +1,13 @@
+Haoran Miao 301542189 hma98@sfu.ca
+Lab2 
+
+Question 1:
+
+The function returns the closest square of a integer that is greater than or equal to 60.
+
+Question 2: 
+
+I picked the preserved register to be the rbx which stores the value of c. 
+I picked it to store c is because I can than add d directly to rbx before returning it.
+So I can use one less register in my code. 
+The other registers are non-preserved registers.

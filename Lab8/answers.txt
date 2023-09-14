@@ -1,0 +1,36 @@
+Haoran Miao 
+301542189
+hma98@sfu.ca
+
+Question 1:
+
+When calculating for arrays with low W and high H, the sum_col is around 0.5ms faster than sum_row
+with the spped of 4.83 ms on 1*5120000 array, and  5.29 ms on 2*2560000 array.
+compared with 5.74 ms on 1*5120000 array, and 5.77 ms on 2*2560000 array. for sum_row
+but when the W and H are reversed, the speed of sum_row and sum_col are similar,
+with sum_row at 5.83 ms on 5120000*1 array., and sum_col at 7.79 ms on 5120000*1 array.
+
+Question 2:
+
+When the number are larger than the cache, the time speed is almost two times,
+7.29 ms on 4*1280000 array, in L1 cache, but 15.16 ms on 5*1024000 array, in L2 cache
+and 39.72 ms on 16*320000 array. in L3 cache.
+Each time the array size doubles, the time almost doubles as well.
+Because when the array size exceeds the cache size, it needs to fetch data from memory,
+
+Question 3:
+
+I think this has to do with the outer for loop.
+for the sum_col, the outer for loop takes width as its iterator, so i is faster if we have smaller width than smaller height
+so there is less w+1 instructions being executed.
+
+Question 4:
+
+The cmov is not faster than the regular funcition, in fact slower.
+hailstone_length_c calculated  103275238 in 222 ms
+hailstone_length calculated  103275238 in 144 ms
+hailstone_length_cmov calculated  103275238 in 155 ms
+But it is still almost doubles the speed of the C function.
+I expect the cmov to be fast, but to be able to do cmov if added more instructions then the normal hailstone function
+I did not do any jmp to the even calls in the function for cmov, but it is still slower. 
+

@@ -1,0 +1,15 @@
+Lab7
+Haoran Miao
+301542189
+hma98@sfu.ca
+
+Question 1:
+
+I used : gcc -Wall -Wpedantic -std=c17 -march=haswell tests.c lab7.S -o test
+to complie and test the code
+
+Question 2:
+The timings are quite similar, but the assembly code, dot and dot_struct functions
+are faster than the lab7c.c version. This is because the assembly code 
+has fewer function calls and does not need to push and pop arguments.
+

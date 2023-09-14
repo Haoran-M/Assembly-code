@@ -1,0 +1,14 @@
+# Haoran Miao
+# 301542189
+# hma98@sfu.ca
+
+1.  I did the test on my laptop, the cpu is 11th Gen intel(R) core(tm) i7-1165G7 @2.80GHz
+
+2. By comparing the results the second method is around 10% fast than the third method
+
+3. In the polynomial section, the third method was the slowest method of all the other method.
+    it is 50% slower than the other methods.
+    But in other tests like mul and is_odd, the third method is not the slowest, and is the fastest method for mul.
+    it is only 10% slower compared to the other methods for is_odd
+
+4.  In my programe of mul2, mul2 has one more instruction, which is add, this casued mul2 take more cycles than mul1

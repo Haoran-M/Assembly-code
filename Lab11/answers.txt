@@ -1,0 +1,25 @@
+# Haoran Miao 
+# 301542189
+# hma98@sfu.ca
+
+Question 1:
+
+The dot and map poly functions compared to last week, is faster.
+dot_double took    36.1 ms
+dot_double_vec took    12.3 ms
+dot_single took    36.4 ms
+dot_single_vec took     7.6 ms
+map_poly_double took   116.3 ms
+map_poly_double_vec took     120.3 ms
+map_poly_single took   113.4 ms
+map_poly_single_vec took   117.9 ms
+However, the map_poly did not improve as much as the dot product functions. This might be with the over use of instructions in the assembly compared
+
+Question 2:
+
+The single functions using vectors are all faster than the double functions using vectors in both dot and map_poly functions
+
+Question 3:
+
+The reason why the lab11c.cpp runs slower than lab11_vc.cpp is because lab11c.cpp is treated more like a array, while lab11_vc.cpp is vectorized and uses SIMD instruction.
+The complier does not know this that it can use vectors to solve this problem, unless specified. Vectors and SIMD instructions runs faster than the regular float instructions.

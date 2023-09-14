@@ -1,0 +1,45 @@
+Lab 1 
+Haoran Miao , 301542189 , hma98@sfu.ca
+
+Question 1:
+
+first command to assemble .s file to ,o file:
+as array_sum.S -o array_sum.o
+
+second step to change .c file to .i file:
+cpp array_sum_speed.c -o array_sum_speed.i
+
+then change .i file to .s file named array_sum_speed.s:
+gcc -Wall -Wpedantic -std=c17 -march=haswell -S array_sum_speed.i
+
+then convert array_sum_speed.s to .o:
+as array_sum_speed.s -o array_sum_speed.o 
+
+Lastly link the two files into output named test:
+ld array_sum_speed.o array_sum.o -o test
+
+Run and test code using array of 10000:
+./test 10000
+
+
+question 2:
+
+first command use was:
+gcc -Wall -Wpedantic -std=c17 -march=haswell array_sum_speed.c array_sum.c -o test1
+the assembly process:
+calculated 44901 in around 8500 cycles
+the gcc command line:
+calculated 44901 in about 62000 cycles
+assembly was 50000 cycles faster than using the gcc command.
+
+Question 3:
+After adding -O3 command in the assembly process:
+calculated 44901 in about 1600 cycle.
+This was 4 times faster than not using -O3 command when assembling and was 30 times faster than the gcc command line.
+
+
+
+
+
+
+

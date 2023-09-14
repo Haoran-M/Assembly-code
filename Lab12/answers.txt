@@ -1,0 +1,28 @@
+Haoran Miao 
+301542189
+hma98@sfu.ca
+
+Question 1:
+The local variable n is stored in %edi, and is_even is stored in %rax
+Under -O1 is_even is stored in %eax, and n is stored in %edi.
+
+Question 2:
+leaq    (%rdi,%rdi,2), %rdi
+incq    %rdi
+addq    %rax, %rcx
+incq    %rcx
+This is 3*n+1 at -O2, is first muliply itself by 2 and then increment by 1, then add n again.
+
+Question 3:
+-O1 put all the if else branchings under one fucntion call.
+-O2 created different function calls, for different if else branches.
+
+Question 4:
+map_poly_single_c is vectorized because its for loop got vectorized, and each iteration is under vectorization.
+dot_single_c is not vectorized because its for loop did not get vectorized, but the inner loop is vectorized.
+
+Question 5:
+-funsafe-math-optimizations vectorized the for loop for dot_single_c, making the whole function using Vectorization.
+
+Question 6:
+After using -funsafe-math-optimizations, the running speed for the functions was faster compared with just using -O3.

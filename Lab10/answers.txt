@@ -1,0 +1,30 @@
+# Haoran Miao 
+# 301542189
+# hma98@sfu.ca
+
+Question 1:
+
+The dot and map_poly function in the assembly code is 2 times slower than the c function, Because the assembly code have to many mov instruction
+The double is about 35% faster than the single function for both dot and map_poly functions
+             dot_double_c took    24.8 ms
+               dot_double took    48.6 ms
+             dot_single_c took    21.3 ms
+               dot_single took    60.1 ms
+       map_poly_double_c1 took    17.0 ms
+       map_poly_double_c2 took    14.2 ms
+          map_poly_double took    34.6 ms
+        map_poly_single_c took     7.2 ms
+          map_poly_single took    75.8 ms
+
+Questions 2:
+
+As stated above my preditions for map_poly assembly function was that it runs faster, but it is around 100% slower than the .c function
+this is caused by to many mov functions in the assembly code that i can not remove
+i predict the Double functions will be faster than the single function and the prediction is correct, the double function is around 30% faster than the single function
+
+Question 3:
+
+               sin_x87 took   249.3 ms
+               sin_stdlib took    92.7 ms 
+
+This is the running time for the two functions we can see that the sin_stdlib is around 280% faster than the sin_x87 assembly code instruction.
